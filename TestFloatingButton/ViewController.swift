@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FloatingButtonProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,11 +25,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidAppear(_ animated: Bool) {
         
-        floatButton = FloatingButton(width: 70, height: 70)
+        floatButton = FloatingButton(width: 70, height: 70, fillColor: UIColor.red, buttonShape: .FiveDot, hasShadow: true)
+        floatButton.delegate = self
         self.view.addSubview(floatButton)
 
     }
     
+    func buttonPressed(isButtonSelected: Bool) {
+        print("Button pressed")
+        
+        tableView.setEditing(isButtonSelected, animated: true)
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
