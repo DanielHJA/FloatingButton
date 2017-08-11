@@ -186,7 +186,7 @@ class FloatingButton: UIButton {
         
             switch animationType {
                 case .Rotate:
-                    rotationgAnimation()
+                    rotationAnimation()
                 case .Stretch:
                     stretchAnimation()
                 case .Jump:
@@ -195,7 +195,7 @@ class FloatingButton: UIButton {
         }
     }
     
-    func rotationgAnimation() {
+    func rotationAnimation() {
 
         let fullRotation = CABasicAnimation(keyPath: "transform.rotation")
         fullRotation.duration = 0.3
@@ -214,13 +214,30 @@ class FloatingButton: UIButton {
             
         }
         
-        buttonLayer.add(fullRotation, forKey: "360")
+        buttonLayer.add(fullRotation, forKey: "rotationAnimation")
         
     }
     
     func stretchAnimation() {
     
-        UIView.animate(withDuration: 0.2) {
+        let stretch = CABasicAnimation(keyPath: "transform.scale")
+        stretch.duration = 0.2
+        stretch.isRemovedOnCompletion = false
+        stretch.fillMode = kCAFillModeForwards
+        
+        if !self.isSelected {
+        
+            stretch.fromValue = Float(1.0)
+            stretch.toValue = Float(0.6)
+          
+        } else {
+            
+            stretch.fromValue = Float(0.6)
+            stretch.toValue = Float(1.0)
+        }
+        
+        buttonLayer.add(stretch, forKey: "stretchAnimation")
+        /*UIView.animate(withDuration: 0.2) {
             
             if !self.isSelected {
                 
@@ -231,7 +248,7 @@ class FloatingButton: UIButton {
                 self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 
             }
-        }
+        }*/
     }
     
     func jumpAnimation() {
