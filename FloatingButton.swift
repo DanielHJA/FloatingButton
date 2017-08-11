@@ -16,6 +16,10 @@ enum ButtonShape {
     case Circle, Square, Rounded, Triangle, FiveDot
 }
 
+enum AnimationType {
+    case Rotate, Stretch, Jump
+}
+
 class FloatingButton: UIButton {
     
     var bottomConstraint: NSLayoutConstraint!
@@ -24,14 +28,23 @@ class FloatingButton: UIButton {
     var heightConstraint: NSLayoutConstraint!
 
     var delegate: FloatingButtonProtocol?
-    var circleLayer: CAShapeLayer!
+    var buttonLayer: CAShapeLayer!
     var width: CGFloat = 0.0
     var height : CGFloat = 0.0
     var hasShadow: Bool = false
     var buttonFillColor: CGColor!
     var buttonShape: ButtonShape = .Circle
+    var animation: AnimationType?
     
-    convenience init(width: CGFloat, height: CGFloat, fillColor: UIColor, buttonShape: ButtonShape, hasShadow: Bool) {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    convenience init(width: CGFloat, height: CGFloat, fillColor: UIColor, buttonShape: ButtonShape, hasShadow: Bool, animation: AnimationType?) {
         self.init(frame: CGRect(x: 0, y: 0, width: width, height: height))
     
         self.width = width
@@ -39,37 +52,36 @@ class FloatingButton: UIButton {
         self.buttonFillColor = fillColor.cgColor
         self.buttonShape = buttonShape
         self.hasShadow = hasShadow
+        self.animation = animation
         
         translatesAutoresizingMaskIntoConstraints = false
         self.addTarget(self, action: #selector(touchUpInside), for: UIControlEvents.touchDown)
-        //self.addTarget(self, action: #selector(touchExit), for: UIControlEvents.touchUpInside)
         
-        circleLayer = CAShapeLayer()
-        circleLayer.frame = bounds
-        circleLayer.backgroundColor = UIColor.clear.cgColor
-        circleLayer.fillColor = buttonFillColor
-        circleLayer.path = returnButtonShape()
-        
-        if hasShadow {
-            
-            circleLayer.shadowColor = UIColor.black.cgColor
-            circleLayer.shadowOpacity = 0.7
-            circleLayer.shadowRadius = 5.0
-            circleLayer.shadowOffset = CGSize(width: 5.0, height: 5.0)
-            
-        }
-        
-        layer.addSublayer(circleLayer)
+        addLayer()
         
         if let superV = self.superview {
-            
             superV.bringSubview(toFront: self)
-            
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    func addLayer(){
+    
+        buttonLayer = CAShapeLayer()
+        buttonLayer.frame = bounds
+        buttonLayer.backgroundColor = UIColor.clear.cgColor
+        buttonLayer.fillColor = buttonFillColor
+        buttonLayer.path = returnButtonShape()
+        
+        if hasShadow {
+            
+            buttonLayer.shadowColor = UIColor.black.cgColor
+            buttonLayer.shadowOpacity = 0.7
+            buttonLayer.shadowRadius = 5.0
+            buttonLayer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+            
+        }
+        
+        layer.addSublayer(buttonLayer)
     }
     
     func returnButtonShape() -> CGPath {
@@ -140,10 +152,6 @@ class FloatingButton: UIButton {
         return fiveLayer.cgPath
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     override func updateConstraints() {
         super.updateConstraints()
         
@@ -164,23 +172,7 @@ class FloatingButton: UIButton {
     
     func touchUpInside() {
         
-        let fullRotation = CABasicAnimation(keyPath: "transform.rotation")
-        fullRotation.duration = 0.3
-        fullRotation.repeatCount = 1
-        
-        if !isSelected {
-            
-            fullRotation.fromValue = NSNumber(floatLiteral: 0)
-            fullRotation.toValue = NSNumber(floatLiteral: Double(CGFloat.pi * 2))
-            
-        } else {
-            
-            fullRotation.fromValue = NSNumber(floatLiteral: Double(CGFloat.pi * 2))
-            fullRotation.toValue = NSNumber(floatLiteral: 0)
-            
-        }
-        
-        circleLayer.add(fullRotation, forKey: "360")
+        animate()
         
         self.isSelected = !self.isSelected
         
@@ -188,5 +180,69 @@ class FloatingButton: UIButton {
         
     }
     
-    /*func touchExit(sender: UIControl) {}*/
+    func animate() {
+    
+        if let animationType = animation {
+        
+            switch animationType {
+                case .Rotate:
+                    rotationgAnimation()
+                case .Stretch:
+                    stretchAnimation()
+                case .Jump:
+                    jumpAnimation()
+            }
+        }
+    }
+    
+    func rotationgAnimation() {
+
+        let fullRotation = CABasicAnimation(keyPath: "transform.rotation")
+        fullRotation.duration = 0.3
+        fullRotation.repeatCount = 1
+        fullRotation.isRemovedOnCompletion = true
+        
+        if !isSelected {
+            
+        fullRotation.fromValue = NSNumber(floatLiteral: 0)
+        fullRotation.toValue = NSNumber(floatLiteral: Double(CGFloat.pi * 2))
+            
+        } else {
+            
+        fullRotation.fromValue = NSNumber(floatLiteral: Double(CGFloat.pi * 2))
+        fullRotation.toValue = NSNumber(floatLiteral: 0)
+            
+        }
+        
+        buttonLayer.add(fullRotation, forKey: "360")
+        
+    }
+    
+    func stretchAnimation() {
+    
+        UIView.animate(withDuration: 0.2) {
+            
+            if !self.isSelected {
+                
+                self.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+                
+            } else {
+                
+                self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                
+            }
+        }
+    }
+    
+    func jumpAnimation() {
+    
+        let jumpAnimation = CABasicAnimation(keyPath: "transform.translation.y")
+            jumpAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            jumpAnimation.duration = 0.1
+            jumpAnimation.repeatCount = 1
+            jumpAnimation.autoreverses = true
+            jumpAnimation.isRemovedOnCompletion = true
+            jumpAnimation.toValue = -25.0
+            buttonLayer.add(jumpAnimation, forKey: "jumpAnimation")
+    }
 }

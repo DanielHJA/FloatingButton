@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidAppear(_ animated: Bool) {
         
-        floatButton = FloatingButton(width: 70, height: 70, fillColor: UIColor.red, buttonShape: .FiveDot, hasShadow: true)
+        floatButton = FloatingButton(width: 70, height: 70, fillColor: UIColor.red, buttonShape: .FiveDot, hasShadow: true, animation: .Rotate)
         floatButton.delegate = self
         self.view.addSubview(floatButton)
 
