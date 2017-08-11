@@ -1,0 +1,12 @@
+PODS:
+  - Toucan (0.6.0)
+
+DEPENDENCIES:
+  - Toucan
+
+SPEC CHECKSUMS:
+  Toucan: 47485bbc9cb4541ef6318d6886103e6eaf16e919
+
+PODFILE CHECKSUM: e2ab16ccc2af12a5b7e8840fcdb5ee8dce108afc
+
+COCOAPODS: 1.1.1

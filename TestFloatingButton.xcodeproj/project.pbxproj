@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		007B790B4F38DB2F30A44246 /* Pods_TestFloatingButtonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6300B3232B924CA22D7B8398 /* Pods_TestFloatingButtonTests.framework */; };
+		0659619B08CD7F4DB1A6A3A5 /* Pods_TestFloatingButtonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8B5168CA9001EC1C915C01 /* Pods_TestFloatingButtonUITests.framework */; };
 		7B0747901F3BD3B400856C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B07478F1F3BD3B400856C58 /* AppDelegate.swift */; };
 		7B0747921F3BD3B400856C58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0747911F3BD3B400856C58 /* ViewController.swift */; };
 		7B0747951F3BD3B400856C58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B0747931F3BD3B400856C58 /* Main.storyboard */; };
@@ -16,6 +18,7 @@
 		7B0747B01F3BD3B400856C58 /* TestFloatingButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0747AF1F3BD3B400856C58 /* TestFloatingButtonUITests.swift */; };
 		7B0747BE1F3BD3C200856C58 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0747BD1F3BD3C200856C58 /* FloatingButton.swift */; };
 		7B3526401F3DEBF70035892B /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B35263F1F3DEBF70035892B /* CustomCellTableViewCell.swift */; };
+		A306C14838ECC4A8E4DE0457 /* Pods_TestFloatingButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49E6ED0BD7FA3A6EF19B6A1 /* Pods_TestFloatingButton.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		386550E747E480E0D08BB263 /* Pods-TestFloatingButtonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFloatingButtonUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestFloatingButtonUITests/Pods-TestFloatingButtonUITests.release.xcconfig"; sourceTree = "<group>"; };
+		582E043277CF6DE78C734E0D /* Pods-TestFloatingButtonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFloatingButtonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestFloatingButtonTests/Pods-TestFloatingButtonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CB1CC27A96EDAA2AFF33BF4 /* Pods-TestFloatingButtonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFloatingButtonUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestFloatingButtonUITests/Pods-TestFloatingButtonUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		61EE035AAA49EB8CED5D4E84 /* Pods-TestFloatingButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFloatingButton.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestFloatingButton/Pods-TestFloatingButton.release.xcconfig"; sourceTree = "<group>"; };
+		6300B3232B924CA22D7B8398 /* Pods_TestFloatingButtonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFloatingButtonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B07478C1F3BD3B400856C58 /* TestFloatingButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFloatingButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B07478F1F3BD3B400856C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B0747911F3BD3B400856C58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +59,10 @@
 		7B0747B11F3BD3B400856C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B0747BD1F3BD3C200856C58 /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatingButton.swift; path = ../FloatingButton.swift; sourceTree = "<group>"; };
 		7B35263F1F3DEBF70035892B /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		874555D687BA4A2EB4F9409D /* Pods-TestFloatingButtonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFloatingButtonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestFloatingButtonTests/Pods-TestFloatingButtonTests.release.xcconfig"; sourceTree = "<group>"; };
+		D087150B6C6E81EFC0837608 /* Pods-TestFloatingButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFloatingButton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestFloatingButton/Pods-TestFloatingButton.debug.xcconfig"; sourceTree = "<group>"; };
+		E49E6ED0BD7FA3A6EF19B6A1 /* Pods_TestFloatingButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFloatingButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF8B5168CA9001EC1C915C01 /* Pods_TestFloatingButtonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFloatingButtonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A306C14838ECC4A8E4DE0457 /* Pods_TestFloatingButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				007B790B4F38DB2F30A44246 /* Pods_TestFloatingButtonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0659619B08CD7F4DB1A6A3A5 /* Pods_TestFloatingButtonUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		437EF750C05153FE71072D1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E49E6ED0BD7FA3A6EF19B6A1 /* Pods_TestFloatingButton.framework */,
+				6300B3232B924CA22D7B8398 /* Pods_TestFloatingButtonTests.framework */,
+				EF8B5168CA9001EC1C915C01 /* Pods_TestFloatingButtonUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7B0747831F3BD3B300856C58 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,8 @@
 				7B0747A31F3BD3B400856C58 /* TestFloatingButtonTests */,
 				7B0747AE1F3BD3B400856C58 /* TestFloatingButtonUITests */,
 				7B07478D1F3BD3B400856C58 /* Products */,
+				A132DCEE2EA5AD1FCD6A5BBC /* Pods */,
+				437EF750C05153FE71072D1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +158,19 @@
 			path = TestFloatingButtonUITests;
 			sourceTree = "<group>";
 		};
+		A132DCEE2EA5AD1FCD6A5BBC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D087150B6C6E81EFC0837608 /* Pods-TestFloatingButton.debug.xcconfig */,
+				61EE035AAA49EB8CED5D4E84 /* Pods-TestFloatingButton.release.xcconfig */,
+				582E043277CF6DE78C734E0D /* Pods-TestFloatingButtonTests.debug.xcconfig */,
+				874555D687BA4A2EB4F9409D /* Pods-TestFloatingButtonTests.release.xcconfig */,
+				5CB1CC27A96EDAA2AFF33BF4 /* Pods-TestFloatingButtonUITests.debug.xcconfig */,
+				386550E747E480E0D08BB263 /* Pods-TestFloatingButtonUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B0747B41F3BD3B400856C58 /* Build configuration list for PBXNativeTarget "TestFloatingButton" */;
 			buildPhases = (
+				29C83EC8804CF20B70D6285C /* [CP] Check Pods Manifest.lock */,
 				7B0747881F3BD3B400856C58 /* Sources */,
 				7B0747891F3BD3B400856C58 /* Frameworks */,
 				7B07478A1F3BD3B400856C58 /* Resources */,
+				C628A9E5AC1CF85A97FA5AA7 /* [CP] Embed Pods Frameworks */,
+				BCAE30DF7EF968C690B061E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B0747B71F3BD3B400856C58 /* Build configuration list for PBXNativeTarget "TestFloatingButtonTests" */;
 			buildPhases = (
+				5DAB96458F1EECB3B835606C /* [CP] Check Pods Manifest.lock */,
 				7B07479C1F3BD3B400856C58 /* Sources */,
 				7B07479D1F3BD3B400856C58 /* Frameworks */,
 				7B07479E1F3BD3B400856C58 /* Resources */,
+				5B434865EFF2F088D2115E6F /* [CP] Embed Pods Frameworks */,
+				F6E2266D7195819A873F68AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B0747BA1F3BD3B400856C58 /* Build configuration list for PBXNativeTarget "TestFloatingButtonUITests" */;
 			buildPhases = (
+				760E36074F3CF4C3EBDFABC6 /* [CP] Check Pods Manifest.lock */,
 				7B0747A71F3BD3B400856C58 /* Sources */,
 				7B0747A81F3BD3B400856C58 /* Frameworks */,
 				7B0747A91F3BD3B400856C58 /* Resources */,
+				BD835D50E7E03BD8B21B412A /* [CP] Embed Pods Frameworks */,
+				931911AA64B50AD81F93984C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,6 +311,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29C83EC8804CF20B70D6285C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5B434865EFF2F088D2115E6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestFloatingButtonTests/Pods-TestFloatingButtonTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DAB96458F1EECB3B835606C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		760E36074F3CF4C3EBDFABC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		931911AA64B50AD81F93984C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestFloatingButtonUITests/Pods-TestFloatingButtonUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCAE30DF7EF968C690B061E8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestFloatingButton/Pods-TestFloatingButton-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD835D50E7E03BD8B21B412A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestFloatingButtonUITests/Pods-TestFloatingButtonUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C628A9E5AC1CF85A97FA5AA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestFloatingButton/Pods-TestFloatingButton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6E2266D7195819A873F68AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestFloatingButtonTests/Pods-TestFloatingButtonTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B0747881F3BD3B400856C58 /* Sources */ = {
@@ -423,6 +610,7 @@
 		};
 		7B0747B51F3BD3B400856C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D087150B6C6E81EFC0837608 /* Pods-TestFloatingButton.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6ZL797GF7H;
@@ -436,6 +624,7 @@
 		};
 		7B0747B61F3BD3B400856C58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61EE035AAA49EB8CED5D4E84 /* Pods-TestFloatingButton.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6ZL797GF7H;
@@ -449,6 +638,7 @@
 		};
 		7B0747B81F3BD3B400856C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 582E043277CF6DE78C734E0D /* Pods-TestFloatingButtonTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -464,6 +654,7 @@
 		};
 		7B0747B91F3BD3B400856C58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 874555D687BA4A2EB4F9409D /* Pods-TestFloatingButtonTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -479,6 +670,7 @@
 		};
 		7B0747BB1F3BD3B400856C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CB1CC27A96EDAA2AFF33BF4 /* Pods-TestFloatingButtonUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6ZL797GF7H;
@@ -493,6 +685,7 @@
 		};
 		7B0747BC1F3BD3B400856C58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 386550E747E480E0D08BB263 /* Pods-TestFloatingButtonUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6ZL797GF7H;
