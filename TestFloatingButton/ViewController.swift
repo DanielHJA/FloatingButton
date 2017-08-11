@@ -19,8 +19,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(hideShowFloatingButton(sender:)), name: NSNotification.Name(rawValue: "ToggleFloatingButton"), object: nil)
+        
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func hideShowFloatingButton(sender: Notification) {
+    
+        if let state = sender.userInfo?["state"] as? HideShowButton {
+            
+            if state == .Show {
+            
+                floatButton.isHidden = false
+                
+            } else if state == .Hide {
+            
+                floatButton.isHidden = true
+                
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
