@@ -72,11 +72,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCellTableViewCell
         
-        cell.textLabel?.text = mockData[indexPath.row]
+        cell.nameLabel.text = mockData[indexPath.row]
+        cell.setImage()
         cell.backgroundColor = UIColor.colorForIndex(index: indexPath.row, ArrCount: mockData.count)
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, index) in
+        }
+        
+        delete.backgroundColor = UIColor.red
+        
+        let more = UITableViewRowAction(style: .normal, title: "More") { (action, index) in
+        }
+        
+        more.backgroundColor = UIColor.green
+        
+        return [more, delete]
         
     }
 
@@ -89,7 +106,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 extension UIColor {
 
     static func colorForIndex(index: Int, ArrCount: Int) -> UIColor {
-        return UIColor(colorLiteralRed: Float(CGFloat(index) / CGFloat(ArrCount) * 0.9), green: 1.0, blue: 0.0, alpha: 1.0)
+        return UIColor(colorLiteralRed: Float(CGFloat(index) / CGFloat(ArrCount) * 0.9), green: 1.0, blue: 1.0, alpha: 1.0)
     }
 }
 
