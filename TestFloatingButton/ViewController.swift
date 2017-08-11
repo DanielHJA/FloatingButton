@@ -51,7 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func buttonPressed(isButtonSelected: Bool) {
         print("Button pressed")
         
-        tableView.setEditing(isButtonSelected, animated: true)
+        tableView.setEditing(isButtonSelected, animated: false)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -100,6 +100,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    deinit {
+        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "ToggleFloatingButton"), object: nil)
     }
 }
 

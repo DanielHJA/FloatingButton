@@ -20,36 +20,28 @@ class CustomCellTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-<<<<<<< HEAD
-    }
-    
-    func setImage() {
-        
-        let img: UIImage = #imageLiteral(resourceName: "IMG_4869 2")
-        
+
     }
     
     override func willTransition(to state: UITableViewCellStateMask) {
 
         var userInfo = [String: Any]()
         
-        // State where left "-" button is showing
-        if state.rawValue == UInt(1) {
+        // State where left "-" button is showing || Standard cell state
+        if state.rawValue == UInt(1) || state.rawValue == UInt(0) {
             
             userInfo["state"] = HideShowButton.Show
 
         }
         
-        // State where right delete button will show
-        if state.rawValue == UInt(3) {
+        // State where right delete button will show || Cell swipe, right items showing
+        if state.rawValue == UInt(3) || state.rawValue == UInt(2) {
             
             userInfo["state"] = HideShowButton.Hide
 
         }
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ToggleFloatingButton"), object: nil, userInfo: userInfo)
-=======
-
     
     }
     
@@ -59,9 +51,9 @@ class CustomCellTableViewCell: UITableViewCell {
         
         DispatchQueue.global().async {
             
-            //img = Toucan(image: #imageLiteral(resourceName: "IMG_4869 2")).maskWithEllipse(borderWidth: 4.0, borderColor: UIColor.black).image
+            img = Toucan(image: #imageLiteral(resourceName: "IMG_4869 2")).maskWithEllipse(borderWidth: 4.0, borderColor: UIColor.black).image
          
-            img = Toucan(image: #imageLiteral(resourceName: "IMG_4869 2")).maskWithPathClosure(path: { (rect) -> (UIBezierPath) in
+           /* img = Toucan(image: #imageLiteral(resourceName: "IMG_4869 2")).maskWithPathClosure(path: { (rect) -> (UIBezierPath) in
             
                 let path = UIBezierPath()
                 path.move(to: CGPoint(x: rect.minX, y: rect.midY))
@@ -74,7 +66,7 @@ class CustomCellTableViewCell: UITableViewCell {
 
                 return path
                 
-            }).image
+            }).image*/
             
             DispatchQueue.main.async {
          
@@ -83,7 +75,6 @@ class CustomCellTableViewCell: UITableViewCell {
                 
             }
         }
->>>>>>> master
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
