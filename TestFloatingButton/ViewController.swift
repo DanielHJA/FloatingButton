@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var floatButton: FloatingButton!
     
-    var mockData = ["Monkey","Cat","Dog","Rat","Elephant","Giraffe","Alligator"]
+    var mockData = ["Monkey","Cat","Dog","Rat","Elephant","Giraffe","Alligator","Monkey","Cat","Dog","Rat","Elephant","Giraffe","Alligator", "Monkey","Cat","Dog","Rat","Elephant","Giraffe","Alligator"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +45,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return mockData.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         cell.textLabel?.text = mockData[indexPath.row]
-        
+        cell.backgroundColor = UIColor.colorForIndex(index: indexPath.row, ArrCount: mockData.count)
         return cell
         
     }
@@ -61,5 +69,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
 
+}
+
+extension UIColor {
+
+    static func colorForIndex(index: Int, ArrCount: Int) -> UIColor {
+        return UIColor(colorLiteralRed: Float(CGFloat(index) / CGFloat(ArrCount) * 0.9), green: 1.0, blue: 0.0, alpha: 1.0)
+    }
 }
 
