@@ -15,6 +15,7 @@
 		7B0747A51F3BD3B400856C58 /* TestFloatingButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0747A41F3BD3B400856C58 /* TestFloatingButtonTests.swift */; };
 		7B0747B01F3BD3B400856C58 /* TestFloatingButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0747AF1F3BD3B400856C58 /* TestFloatingButtonUITests.swift */; };
 		7B0747BE1F3BD3C200856C58 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0747BD1F3BD3C200856C58 /* FloatingButton.swift */; };
+		7B3526401F3DEBF70035892B /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B35263F1F3DEBF70035892B /* CustomCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7B0747AF1F3BD3B400856C58 /* TestFloatingButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFloatingButtonUITests.swift; sourceTree = "<group>"; };
 		7B0747B11F3BD3B400856C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B0747BD1F3BD3C200856C58 /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatingButton.swift; path = ../FloatingButton.swift; sourceTree = "<group>"; };
+		7B35263F1F3DEBF70035892B /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				7B0747BD1F3BD3C200856C58 /* FloatingButton.swift */,
 				7B0747911F3BD3B400856C58 /* ViewController.swift */,
 				7B0747931F3BD3B400856C58 /* Main.storyboard */,
+				7B35263F1F3DEBF70035892B /* CustomCellTableViewCell.swift */,
 				7B0747961F3BD3B400856C58 /* Assets.xcassets */,
 				7B0747981F3BD3B400856C58 /* LaunchScreen.storyboard */,
 				7B07479B1F3BD3B400856C58 /* Info.plist */,
@@ -267,6 +270,7 @@
 			files = (
 				7B0747921F3BD3B400856C58 /* ViewController.swift in Sources */,
 				7B0747901F3BD3B400856C58 /* AppDelegate.swift in Sources */,
+				7B3526401F3DEBF70035892B /* CustomCellTableViewCell.swift in Sources */,
 				7B0747BE1F3BD3C200856C58 /* FloatingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +524,7 @@
 				7B0747B61F3BD3B400856C58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B0747B71F3BD3B400856C58 /* Build configuration list for PBXNativeTarget "TestFloatingButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				7B0747B91F3BD3B400856C58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B0747BA1F3BD3B400856C58 /* Build configuration list for PBXNativeTarget "TestFloatingButtonUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				7B0747BC1F3BD3B400856C58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
