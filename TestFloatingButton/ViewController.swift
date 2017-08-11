@@ -63,6 +63,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, index) in
+        }
+        
+        delete.backgroundColor = UIColor.red
+        
+        let more = UITableViewRowAction(style: .normal, title: "More") { (action, index) in
+        }
+        
+        more.backgroundColor = UIColor.green
+        
+        return [more, delete]
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
